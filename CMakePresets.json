@@ -1,0 +1,17 @@
+{
+  "version": 10,
+  "configurePresets": [
+    {
+      "name": "default",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "installDir": "${sourceDir}/install/${presetName}",
+      "environment": {
+        "VCPKG_ROOT": "E:/vcpkg",
+        "CLANG_BIN": "E:/LLVM-19.1.0/bin",
+        "MSVC_BIN": "E:/Program Files/Microsoft Visual Studio/2022/Community"
+      }
+    }
+  ]
+ }
+ 
