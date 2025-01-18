@@ -7,12 +7,12 @@ class AbcImpl : public IAbc
     letters_t GreekName(greek_t greek);
     void Release();
     
-    public:
-    static letters_t letters[4];
+    private:
+    static static_t letters[4];
 
 };
 
-letters_t AbcImpl::letters[] = {"ALPHA","BETA","GAMMA","NIL"};
+static_t AbcImpl::letters[] = {"ALPHA","BETA","GAMMA","NIL"};
 
 letters_t AbcImpl::GreekIndex(greek_t greek)
 {

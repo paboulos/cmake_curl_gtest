@@ -16,7 +16,8 @@
 // The abstract interface for Xyz object.
 // No extra specifiers required.
 typedef enum { ALPHA=0, BETA, GAMMA, NIL} greek_t;
-typedef const char* letters_t; 
+typedef const char* const static_t;
+typedef const char* letters_t;
 struct IAbc
 {
     virtual letters_t GreekIndex(greek_t greek) = 0;
