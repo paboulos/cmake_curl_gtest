@@ -9,11 +9,11 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 include(GoogleTest)
 
-
 set(TEST_SOURCES 
   "api_test.cc" 
   "run_test.cc")
 set(TEST_INCLUDES "./")
+add_subdirectory(app_httpd)
 
 add_executable(${TEST_MAIN} ${TEST_SOURCES})
 target_include_directories(

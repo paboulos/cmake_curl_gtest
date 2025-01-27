@@ -11,13 +11,15 @@
       "inherits": "default",
       "generator": "Visual Studio 17 2022",
       "environment": {
-        "CXX": "$env{MSVC_BIN}/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe"
+        "CXX": "$env{MSVC_BIN}/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe",
+        "C": "$env{MSVC_BIN}/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe"
       },
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE":"$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
-        "CMAKE_CXX_COMPILER": "cl"
+        "CMAKE_CXX_COMPILER": "cl",
+        "CMAKE_C_COMPILER": "cl"
       }
     },
     {
@@ -25,13 +27,15 @@
       "inherits": "default",
       "generator": "Ninja",
       "environment": {
-        "CXX": "$env{CLANG_BIN}/clang.exe"
+        "CXX": "$env{CLANG_BIN}/clang.exe",
+        "C": "$env{CLANG_BIN}/clang.exe"
       },
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE":"$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
-        "CMAKE_CXX_COMPILER": "clang-cl"
+        "CMAKE_CXX_COMPILER": "clang-cl",
+        "CMAKE_C_COMPILER": "clang-cl"
       }
     }
   ]

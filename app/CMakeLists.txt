@@ -1,17 +1,19 @@
 set(EXE_SOURCES
     "bootstrap.cc")
 
-add_library( ${EXE_LIB_NAME} STATIC run.cc)
+add_library( 
+    ${EXE_LIB_NAME} 
+    STATIC 
+    run.cc)
 target_include_directories(
     ${EXE_LIB_NAME} 
     PUBLIC 
-    .
-    ${CURL_INCLUDE_DIRS})
+    .)
 target_link_libraries(
     ${EXE_LIB_NAME} 
     PUBLIC
-    ${LIBRARY_NAME}
-    ${CURL_LIBRARIES})
+    ${LIBRARY_NAME})
+
 add_executable(${EXECUTABLE_NAME} ${EXE_SOURCES})
 target_link_libraries(
     ${EXECUTABLE_NAME} 

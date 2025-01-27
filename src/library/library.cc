@@ -3,9 +3,9 @@
 
 class AbcImpl : public IAbc
 {
-    letters_t GreekIndex(greek_t greek);
-    letters_t GreekName(greek_t greek);
-    void Release();
+    letters_t GreekIndex(greek_t greek) override;
+    letters_t GreekName(greek_t greek) override;
+    void Release() override;
     
     private:
     static static_t letters[4];

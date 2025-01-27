@@ -1,8 +1,8 @@
 #include "libapi.hpp"
 #include <iostream>
-#include <curl/curl.h>
+
 /**
- * 
+ * Run the api from the library
  */
 int run(int argc, char** argv) {
     AbcHANDLE pAbc = ::CreateAbc();
